@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: training-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: training-api
+  template:
+    metadata:
+      labels:
+        app: training-api
+    spec:
+      containers:
+       - image: training-api:1.0
+         name: training-api
+         imagePullPolicy: IfNotPresent
+         ports:
+           - containerPort: 8080
+         env:
+            - name: SPRING_DATASOURCE_PASSWORD
+              value: changeme
+            - name: SPRING_DATASOURCE_URL
+              value: jdbc:postgresql://postgresql:5432/northwind?useSSL=false
+            - name: SPRING_DATASOURCE_USERNAME
+              value: postgres
+            - name: SPRING_JPA_HIBERNATE_DDL_AUTO
+              value: update
