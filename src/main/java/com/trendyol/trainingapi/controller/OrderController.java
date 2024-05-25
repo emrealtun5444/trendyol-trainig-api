@@ -56,6 +56,12 @@ public class OrderController {
         return ResponseEntity.ok(orders);
     }
 
+    @GetMapping("/all")
+    public ResponseEntity<List<OrderResponse>> getByOrders() {
+        final var orders = orderService.getOrders();
+        return ResponseEntity.ok(orders);
+    }
+
     @GetMapping("/items/{orderId}")
     public ResponseEntity<List<OrderItemModel>> getOrderItemsByOrderId(@PathVariable Long orderId) {
         final var orders = orderItemService.getOrderItemsByOrderId(orderId);

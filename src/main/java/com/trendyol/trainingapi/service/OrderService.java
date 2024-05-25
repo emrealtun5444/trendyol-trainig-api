@@ -51,6 +51,13 @@ public class OrderService {
     }
 
     @Transactional(readOnly = true)
+    public List<OrderResponse> getOrders() {
+       // final var order = orderRepository.findAll();
+        final var orders = orderRepository.findOrders();
+        return getOrderResponses(orders);
+    }
+
+    @Transactional(readOnly = true)
     public OrderResponse getOrderById(Long id) {
         // final var order = orderRepository.findById(id);
         final var order = orderRepository.findOrderByJpql(id);
@@ -71,6 +78,7 @@ public class OrderService {
 
 
             return OrderResponse.builder()
+                    .orderId(order.getId())
                     .user(OrderUserModel.builder()
                             .email(order.getUser().getEmail())
                             .nameSurname(order.getUser().getNameSurname())

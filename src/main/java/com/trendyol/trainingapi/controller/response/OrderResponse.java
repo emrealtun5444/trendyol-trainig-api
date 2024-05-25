@@ -15,6 +15,7 @@ import java.util.List;
 @NoArgsConstructor
 public class OrderResponse {
 
+    private Long orderId;
     private OrderUserModel user;
 
     private String status;
