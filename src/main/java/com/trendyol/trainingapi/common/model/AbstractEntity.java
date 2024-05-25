@@ -14,11 +14,6 @@ import java.util.Date;
 @MappedSuperclass
 public abstract class AbstractEntity implements Serializable {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
-    private Long id;
-
     @Temporal(TemporalType.TIMESTAMP)
     @Column(nullable = false)
     private Date createdDate;
