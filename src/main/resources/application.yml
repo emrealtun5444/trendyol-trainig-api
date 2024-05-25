@@ -1,0 +1,27 @@
+server:
+  port: 8080
+  max-http-request-header-size: 16KB
+
+spring:
+  datasource:
+    hikari:
+      connection-timeout: 3000
+      maximum-pool-size: 5
+      idle-timeout: 0
+      max-lifetime: 58000
+      minimum-idle: 0
+  jpa:
+    open-in-view: false
+  liquibase:
+    change-log: classpath:/liquibase/changelog/changelog-master.xml
+
+management:
+  endpoints:
+    web:
+      base-path: /_monitoring
+      exposure:
+        include: '*'
+
+springdoc:
+  swagger-ui:
+    path: /

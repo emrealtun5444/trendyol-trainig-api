@@ -1,13 +1,13 @@
 package com.trendyol.trainingapi.controller.request;
 
 import com.trendyol.trainingapi.domain.Category;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Pattern;
 import java.math.BigDecimal;
 
 @Builder

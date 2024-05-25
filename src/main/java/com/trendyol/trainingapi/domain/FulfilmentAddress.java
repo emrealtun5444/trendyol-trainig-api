@@ -1,16 +1,12 @@
 package com.trendyol.trainingapi.domain;
 
 import com.trendyol.trainingapi.common.model.AbstractEntity;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
 
 @Getter
 @Builder

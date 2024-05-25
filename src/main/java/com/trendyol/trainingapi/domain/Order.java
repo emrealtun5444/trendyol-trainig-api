@@ -3,6 +3,7 @@ package com.trendyol.trainingapi.domain;
 import com.trendyol.trainingapi.common.model.AbstractEntity;
 import com.trendyol.trainingapi.controller.request.OrderRequest;
 import com.trendyol.trainingapi.controller.request.OrderUpdateRequest;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -10,17 +11,6 @@ import lombok.NoArgsConstructor;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
