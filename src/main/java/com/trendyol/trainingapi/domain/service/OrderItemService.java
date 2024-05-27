@@ -2,6 +2,7 @@ package com.trendyol.trainingapi.domain.service;
 
 import com.trendyol.trainingapi.domain.port.in.OrderItemUseCase;
 import com.trendyol.trainingapi.domain.port.out.OrderItemPersistencePort;
+import com.trendyol.trainingapi.infrastracture.common.UseCase;
 import com.trendyol.trainingapi.infrastracture.rest.response.OrderItemInfo;
 import com.trendyol.trainingapi.infrastracture.rest.response.OrderItemResponse;
 import lombok.RequiredArgsConstructor;
@@ -11,6 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+@UseCase
 @Service
 @RequiredArgsConstructor
 public class OrderItemService implements OrderItemUseCase {

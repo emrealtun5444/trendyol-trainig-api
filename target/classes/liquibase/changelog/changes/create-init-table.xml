@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet author="Emre ALTUN" id="create_tables_seq">
+        <createSequence sequenceName="users_id_seq" cycle="false" minValue="10" maxValue="9223372036854775807" startValue="10" incrementBy="1"/>
+        <createSequence sequenceName="fulfilment_address_id_seq" cycle="false" minValue="10" maxValue="9223372036854775807" startValue="10" incrementBy="1"/>
+        <createSequence sequenceName="orders_id_seq" cycle="false" minValue="10" maxValue="9223372036854775807" startValue="10" incrementBy="1"/>
+        <createSequence sequenceName="order_item_id_seq" cycle="false" minValue="10" maxValue="9223372036854775807" startValue="10" incrementBy="1"/>
+    </changeSet>
+
+    <changeSet author="Emre ALTUN" id="create_init_tables">
+        <createTable tableName="users">
+            <column name="id" type="BIGINT" defaultValueComputed="nextval('users_id_seq')">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column name="user_name" type="VARCHAR(128)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name_surname" type="VARCHAR(128)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="email" type="VARCHAR(64)"/>
+            <column name="created_date" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+            <column name="last_modified_date" type="timestamp"/>
+        </createTable>
+
+        <createTable tableName="fulfilment_address">
+            <column name="id" type="BIGINT" defaultValueComputed="nextval('fulfilment_address_id_seq')">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column name="address" type="VARCHAR(1024)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_date" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+            <column name="last_modified_date" type="timestamp"/>
+        </createTable>
+
+        <createTable tableName="orders">
+            <column name="id" type="BIGINT" defaultValueComputed="nextval('orders_id_seq')">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column name="user_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="fulfilment_address_id" type="INT"/>
+            <column name="status" type="VARCHAR(128)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_date" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+            <column name="last_modified_date" type="timestamp"/>
+        </createTable>
+
+        <addForeignKeyConstraint baseColumnNames="user_id"
+                                 baseTableName="orders"
+                                 constraintName="fk_order_user_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="users"/>
+
+        <addForeignKeyConstraint baseColumnNames="fulfilment_address_id"
+                                 baseTableName="orders"
+                                 constraintName="fk_order_fulfilment_address_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="fulfilment_address"/>
+
+        <createTable tableName="order_item">
+            <column name="id" type="BIGINT" defaultValueComputed="nextval('order_item_id_seq')">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column name="order_id" type="INT"/>
+            <column name="category" type="VARCHAR(128)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="product_code" type="VARCHAR(128)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="product_name" type="VARCHAR(128)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="price" type="java.math.BigDecimal">
+                <constraints nullable="false"/>
+            </column>
+            <column name="quantity" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_date" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+            <column name="last_modified_date" type="timestamp"/>
+        </createTable>
+
+        <addForeignKeyConstraint baseColumnNames="order_id"
+                                 baseTableName="order_item"
+                                 constraintName="fk_order_item_order_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="orders"/>
+
+        <rollback>
+            <dropTable tableName="users"/>
+            <dropTable tableName="orders"/>
+            <dropTable tableName="order_item"/>
+            <dropTable tableName="fulfilment_address"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet author="Emre ALTUN" id="insert_rows">
+
+        <insert tableName="users">
+            <column name="id" value="1"/>
+            <column name="user_name" value="ealtun"/>
+            <column name="name_surname" value="Emre ALTUN"/>
+            <column name="email" value="emre.altun@trendyol.com"/>
+            <column name="created_date" value="now()"/>
+        </insert>
+
+        <insert tableName="users">
+            <column name="id" value="2"/>
+            <column name="user_name" value="test.user"/>
+            <column name="name_surname" value="Test USER"/>
+            <column name="email" value="test.user@trendyol.com"/>
+            <column name="created_date" value="now()"/>
+        </insert>
+
+    </changeSet>
+
+</databaseChangeLog>

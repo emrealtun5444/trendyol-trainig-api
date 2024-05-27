@@ -1,15 +1,17 @@
 package com.trendyol.trainingapi.infrastracture.exception;
 
 
+import lombok.Getter;
+
+@Getter
 public class BaseTrendyolException extends RuntimeException {
+
     private final String key;
+    private final String[] args;
 
-    public BaseTrendyolException(String key) {
+    public BaseTrendyolException(String key, String... args) {
         this.key = key;
-    }
-
-    public String getKey() {
-        return this.key;
+        this.args = args;
     }
 
     @Override
