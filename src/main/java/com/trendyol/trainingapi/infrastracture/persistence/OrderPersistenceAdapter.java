@@ -6,6 +6,7 @@ import com.trendyol.trainingapi.infrastracture.common.Adapter;
 import com.trendyol.trainingapi.infrastracture.persistence.entity.OrderEntity;
 import com.trendyol.trainingapi.infrastracture.persistence.repository.OrderRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -26,6 +27,7 @@ public class OrderPersistenceAdapter implements OrderPersistencePort {
     }
 
     @Override
+    @Cacheable(value = "OrderPersistenceAdapter.findById", key = "#id")
     public Optional<Order> findById(Long id) {
         return orderRepository.findById(id).map(OrderEntity::toOrder);
     }

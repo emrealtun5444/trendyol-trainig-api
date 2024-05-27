@@ -4,7 +4,7 @@ import com.trendyol.trainingapi.domain.entity.Order;
 import com.trendyol.trainingapi.domain.port.in.OrderUseCase;
 import com.trendyol.trainingapi.domain.port.out.OrderPersistencePort;
 import com.trendyol.trainingapi.infrastracture.common.UseCase;
-import com.trendyol.trainingapi.infrastracture.exception.BusinessException;
+import com.trendyol.trainingapi.infrastracture.common.exception.BusinessException;
 import com.trendyol.trainingapi.infrastracture.rest.request.OrderAddressModel;
 import com.trendyol.trainingapi.infrastracture.rest.request.OrderItemModel;
 import com.trendyol.trainingapi.infrastracture.rest.request.OrderRequest;

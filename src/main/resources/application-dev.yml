@@ -11,3 +11,6 @@ spring:
     url: jdbc:postgresql://localhost:5432/orderdb
     username: postgresuser
     password: postgrespw
+
+redis:
+  expirationTimeMinute: 1
