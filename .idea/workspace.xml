@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="dc0bb5e5-392c-4358-a93b-5a29e9cb898c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Add_use_cases/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/domain/entity/ItemCategory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/domain/entity/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/domain/entity/OrderAddress.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/domain/entity/OrderItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/domain/entity/OrderStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/domain/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/domain/port/in/OrderItemUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/domain/port/in/OrderUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/domain/port/in/UserUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/domain/port/out/OrderItemPersistencePort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/domain/port/out/OrderPersistencePort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/domain/port/out/UserPersistencePort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/domain/service/OrderItemService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/domain/service/OrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/domain/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/infrastracture/common/Adapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/infrastracture/common/UseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/infrastracture/exception/BaseTrendyolException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/infrastracture/exception/BusinessException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/infrastracture/exception/CustomizedExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/infrastracture/exception/ErrorResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/infrastracture/persistence/OrderItemPersistenceAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/infrastracture/persistence/OrderPersistenceAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/infrastracture/persistence/UserPersistenceAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/infrastracture/persistence/entity/FulfilmentAddressEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/infrastracture/persistence/entity/OrderEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/infrastracture/persistence/entity/OrderItemEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/infrastracture/persistence/entity/UserEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/infrastracture/persistence/entity/common/AbstractEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/infrastracture/persistence/entity/enm/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/infrastracture/persistence/entity/enm/Status.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/infrastracture/persistence/repository/FulfilmentAddressRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/infrastracture/persistence/repository/OrderItemRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/infrastracture/persistence/repository/OrderRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/infrastracture/persistence/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/infrastracture/persistence/repository/UserSpecification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/infrastracture/rest/OrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/infrastracture/rest/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/infrastracture/rest/request/OrderAddressModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/infrastracture/rest/request/OrderItemModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/infrastracture/rest/request/OrderRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/infrastracture/rest/request/OrderUpdateRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/infrastracture/rest/request/SearchCriteria.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/infrastracture/rest/response/OrderItemInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/infrastracture/rest/response/OrderItemResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/infrastracture/rest/response/OrderResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/infrastracture/rest/response/OrderUserModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/infrastracture/rest/response/UserResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/common/exception/BaseTrendyolException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/common/exception/BusinessException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/common/exception/CustomizedExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/common/exception/ErrorResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/common/model/AbstractEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/controller/OrderController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/controller/request/OrderAddressModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/controller/request/OrderItemModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/controller/request/OrderRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/controller/request/OrderUpdateRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/controller/response/OrderItemInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/controller/response/OrderResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/controller/response/OrderUserModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/controller/response/UserResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/domain/Category.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/domain/FulfilmentAddress.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/domain/Order.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/domain/OrderItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/domain/Status.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/domain/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/model/SearchCriteria.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/repository/FulfilmentAddressRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/repository/OrderItemRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/repository/OrderRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/service/OrderItemService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/service/OrderService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/service/UserSpecification.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/trendyol/trainingapi/TrainingApiApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/trendyol/trainingapi/TrainingApiApplicationTests.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Enum" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2fJ7xfs4N521NO9ElSP84KaIzNg" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "go.import.settings.migrated": "true",
+    "last_opened_file_path": "/Users/emre.altun/Documents/my_workspace/trendyol-trainig-api/src/main/java/com/trendyol/trainingapi/application",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "spring.configuration.checksum": "2ef039647c083938dff14cac7d312d44",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/trendyol/trainingapi/application" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.trendyol.trainingapi.infrastracture.persistence" />
+      <recent name="com.trendyol.trainingapi.infrastracture.rest.response" />
+      <recent name="com.trendyol.trainingapi.domain.entity" />
+      <recent name="com.trendyol.trainingapi.domain.port.in" />
+      <recent name="com.trendyol.trainingapi.domain.port.out" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
+      <module name="trendyol-trainig-api" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
+      <module name="trendyol-trainig-api" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <kind value="DIRECTORY" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="trendyol-trainig-api" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="trendyol-trainig-api" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TrainingApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ACTIVE_PROFILES" value="dev" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="training-api" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.trendyol.trainingapi.TrainingApiApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dc0bb5e5-392c-4358-a93b-5a29e9cb898c" name="Changes" comment="" />
+      <created>1713507575171</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1713507575171</updated>
+      <workItem from="1713507576266" duration="4019000" />
+      <workItem from="1716652075268" duration="21688000" />
+    </task>
+    <task id="LOCAL-00001" summary="Update spring boot version to 3.2.x">
+      <option name="closed" value="true" />
+      <created>1716654285777</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1716654285777</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Change db structure">
+      <option name="closed" value="true" />
+      <created>1716660239146</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1716660239146</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add use cases">
+      <option name="closed" value="true" />
+      <created>1716661606383</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1716661606383</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update spring boot version to 3.2.x" />
+    <MESSAGE value="Change db structure" />
+    <MESSAGE value="Add use cases" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add use cases" />
+  </component>
+  <component name="VgoProject">
+    <settings-migrated>true</settings-migrated>
+  </component>
+</project>
