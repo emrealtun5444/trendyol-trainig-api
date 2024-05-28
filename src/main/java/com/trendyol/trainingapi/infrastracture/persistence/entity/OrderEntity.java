@@ -52,7 +52,7 @@ public class OrderEntity extends AbstractEntity {
     //@BatchSize(size=2)
     private Set<OrderItemEntity> orderItems = new LinkedHashSet<>();
 
-    public  OrderEntity(Order orderRequest) {
+    public static OrderEntity create(Order orderRequest) {
 
         final var fulfilmentAddress = FulfilmentAddressEntity.builder()
                 .address(orderRequest.getAddressInfo().getAddress())
@@ -74,10 +74,12 @@ public class OrderEntity extends AbstractEntity {
                     .order(order)
                     .build());
         });
+
+        return order;
     }
 
     public Order toOrder() {
-       final var orderItems = this.orderItems.stream()
+        final var orderItems = this.orderItems.stream()
                 .map(OrderItemEntity::toOrderItem)
                 .toList();
 

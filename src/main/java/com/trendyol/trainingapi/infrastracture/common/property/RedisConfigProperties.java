@@ -14,5 +14,6 @@ import java.util.List;
 public class RedisConfigProperties {
 
     private Integer expirationTimeMinute;
+    private Integer sessionInfoTTL;
 
 }

@@ -23,7 +23,7 @@ public class OrderPersistenceAdapter implements OrderPersistencePort {
     @Transactional(propagation = Propagation.REQUIRED)
     @Override
     public void save(Order order) {
-        orderRepository.save(new OrderEntity(order));
+        orderRepository.save(OrderEntity.create(order));
     }
 
     @Override
