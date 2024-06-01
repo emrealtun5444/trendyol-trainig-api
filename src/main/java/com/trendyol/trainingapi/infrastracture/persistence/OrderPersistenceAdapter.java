@@ -23,34 +23,39 @@ public class OrderPersistenceAdapter implements OrderPersistencePort {
 
     private final OrderRepository orderRepository;
 
-    @Transactional(propagation = Propagation.REQUIRED)
     @Override
+    @Transactional(propagation = Propagation.REQUIRED)
     public void save(Order order) {
         orderRepository.save(OrderEntity.create(order));
     }
 
     @Override
+    @Transactional(readOnly = true)
     @Cacheable(value = "OrderPersistenceAdapter.findById", key = "#id")
     public Optional<Order> findById(Long id) {
         return orderRepository.findById(id).map(OrderEntity::toOrder);
     }
 
     @Override
+    @Transactional(readOnly = true)
     public List<Order> findByUser_Id(Long userId) {
         return orderRepository.findByUser_Id(userId).stream().map(OrderEntity::toOrder).collect(Collectors.toList());
     }
 
     @Override
+    @Transactional(readOnly = true)
     public Optional<Order> findOrderByJpql(Long id) {
         return orderRepository.findOrderByJpql(id).map(OrderEntity::toOrder);
     }
 
     @Override
+    @Transactional(readOnly = true)
     public List<Order> findOrders() {
         return orderRepository.findOrders().stream().map(OrderEntity::toOrder).collect(Collectors.toList());
     }
 
     @Override
+    @Transactional(readOnly = true)
     public Page<Order> getOrders(int page, int size) {
         Pageable pageable = PageRequest.of(page, size);
         final var ordersPageable = orderRepository.findOrders(pageable);

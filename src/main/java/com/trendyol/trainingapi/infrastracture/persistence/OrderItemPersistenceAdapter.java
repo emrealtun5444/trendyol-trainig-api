@@ -6,6 +6,7 @@ import com.trendyol.trainingapi.infrastracture.persistence.repository.OrderItemR
 import com.trendyol.trainingapi.infrastracture.rest.response.OrderItemProjection;
 import com.trendyol.trainingapi.infrastracture.rest.response.OrderItemResponse;
 import lombok.RequiredArgsConstructor;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -16,11 +17,13 @@ public class OrderItemPersistenceAdapter implements OrderItemPersistencePort {
     private final OrderItemRepository orderItemRepository;
 
     @Override
+    @Transactional(readOnly = true)
     public List<OrderItemResponse> findOrderItemByOrderId(Long orderId) {
         return orderItemRepository.findOrderItemByOrderId(orderId);
     }
 
     @Override
+    @Transactional(readOnly = true)
     public List<OrderItemProjection> findOrderItemByOrder_Id(Long orderId) {
         return orderItemRepository.findOrderItemByOrder_Id(orderId);
     }
