@@ -7,6 +7,6 @@ import java.util.List;
 
 public interface UserUseCase {
 
-    List<UserResponse> findUserByGivenCriteria(SearchCriteria searchCriteria);
+    List<UserResponse> findUserByGivenCriteria(List<SearchCriteria> criteriaList);
 
 }

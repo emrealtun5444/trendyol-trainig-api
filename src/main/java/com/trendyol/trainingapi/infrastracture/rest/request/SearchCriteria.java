@@ -1,5 +1,6 @@
 package com.trendyol.trainingapi.infrastracture.rest.request;
 
+import com.trendyol.trainingapi.infrastracture.common.enm.SearchOperation;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
@@ -14,8 +15,9 @@ public class SearchCriteria {
     private String key;
 
     @NotEmpty(message = "operation can not be empty")
-    private String operation;
+    private SearchOperation operation;
 
     @NotNull(message = "value can not be empty")
     private Object value;
+
 }

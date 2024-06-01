@@ -18,8 +18,8 @@ public class UserService implements UserUseCase {
 
     private final UserPersistencePort userPersistencePort;
 
-    public List<UserResponse> findUserByGivenCriteria(SearchCriteria searchCriteria) {
-        final var users = userPersistencePort.findAll(searchCriteria);
+    public List<UserResponse> findUserByGivenCriteria(List<SearchCriteria> criteriaList) {
+        final var users = userPersistencePort.findAll(criteriaList);
         return users.stream().map(user -> UserResponse.builder()
                 .userName(user.getUserName())
                 .email(user.getEmail())

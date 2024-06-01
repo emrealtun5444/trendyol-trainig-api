@@ -8,6 +8,6 @@ import java.util.List;
 
 public interface UserPersistencePort {
 
-    List<User> findAll(SearchCriteria searchCriteria);
+    List<User> findAll(List<SearchCriteria> criteriaList);
 
 }
