@@ -8,7 +8,7 @@ import lombok.Getter;
 public enum SearchOperation {
     GREATER_THAN(">"),
     LESS_THAN("<"),
-    EQUALS(":");
+    EQUALS("=");
 
     private final String operation;
 
