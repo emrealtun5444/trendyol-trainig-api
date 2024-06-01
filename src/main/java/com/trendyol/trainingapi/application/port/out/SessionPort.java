@@ -1,8 +1,7 @@
-package com.trendyol.trainingapi.domain.port.out;
+package com.trendyol.trainingapi.application.port.out;
 
 
-import com.trendyol.trainingapi.domain.entity.SessionInfo;
-import com.trendyol.trainingapi.infrastracture.redis.entity.SessionInfoEntity;
+import com.trendyol.trainingapi.domain.valueobject.SessionInfo;
 
 import java.util.Optional;
 

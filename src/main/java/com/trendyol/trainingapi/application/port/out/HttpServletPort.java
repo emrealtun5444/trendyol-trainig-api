@@ -1,4 +1,4 @@
-package com.trendyol.trainingapi.domain.port.out;
+package com.trendyol.trainingapi.application.port.out;
 
 
 public interface HttpServletPort {

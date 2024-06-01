@@ -1,6 +1,6 @@
-package com.trendyol.trainingapi.domain.port.in;
+package com.trendyol.trainingapi.application.port.in;
 
-import com.trendyol.trainingapi.domain.entity.SessionInfo;
+import com.trendyol.trainingapi.domain.valueobject.SessionInfo;
 import com.trendyol.trainingapi.domain.model.SessionInfoCreateModel;
 
 public interface SessionUseCase {

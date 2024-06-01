@@ -6,7 +6,7 @@ import com.trendyol.trainingapi.infrastracture.persistence.entity.enm.Status;
 import java.math.BigDecimal;
 import java.util.Date;
 
-public interface OrderItemInfo {
+public interface OrderItemProjection {
     Date getCreatedDate();
 
     Category getCategory();

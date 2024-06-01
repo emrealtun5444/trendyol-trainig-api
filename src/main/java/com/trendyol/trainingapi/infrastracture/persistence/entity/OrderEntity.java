@@ -1,9 +1,9 @@
 package com.trendyol.trainingapi.infrastracture.persistence.entity;
 
-import com.trendyol.trainingapi.domain.entity.Order;
+import com.trendyol.trainingapi.domain.aggregate.Order;
 import com.trendyol.trainingapi.domain.entity.OrderAddress;
 import com.trendyol.trainingapi.domain.entity.OrderStatus;
-import com.trendyol.trainingapi.domain.entity.User;
+import com.trendyol.trainingapi.domain.aggregate.User;
 import com.trendyol.trainingapi.infrastracture.persistence.entity.common.AbstractEntity;
 import com.trendyol.trainingapi.infrastracture.persistence.entity.enm.Category;
 import com.trendyol.trainingapi.infrastracture.persistence.entity.enm.Status;

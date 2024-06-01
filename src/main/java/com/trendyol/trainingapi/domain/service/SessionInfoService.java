@@ -1,12 +1,12 @@
 package com.trendyol.trainingapi.domain.service;
 
-import com.trendyol.trainingapi.domain.entity.SessionInfo;
+import com.trendyol.trainingapi.domain.valueobject.SessionInfo;
 import com.trendyol.trainingapi.domain.model.SessionInfoCreateModel;
-import com.trendyol.trainingapi.domain.port.in.SessionUseCase;
-import com.trendyol.trainingapi.domain.port.out.HttpServletPort;
-import com.trendyol.trainingapi.domain.port.out.RedisPropertyPort;
-import com.trendyol.trainingapi.domain.port.out.SessionPort;
-import com.trendyol.trainingapi.domain.port.out.SessionRequestScopeContextPort;
+import com.trendyol.trainingapi.application.port.in.SessionUseCase;
+import com.trendyol.trainingapi.application.port.out.HttpServletPort;
+import com.trendyol.trainingapi.application.port.out.RedisPropertyPort;
+import com.trendyol.trainingapi.application.port.out.SessionPort;
+import com.trendyol.trainingapi.application.port.out.SessionRequestScopeContextPort;
 import com.trendyol.trainingapi.infrastracture.common.Constants;
 import com.trendyol.trainingapi.infrastracture.common.exception.BusinessException;
 import com.trendyol.trainingapi.infrastracture.common.exception.NoActiveSessionFoundException;

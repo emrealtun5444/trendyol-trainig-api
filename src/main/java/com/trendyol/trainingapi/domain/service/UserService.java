@@ -1,8 +1,8 @@
 package com.trendyol.trainingapi.domain.service;
 
-import com.trendyol.trainingapi.domain.port.in.UserUseCase;
-import com.trendyol.trainingapi.domain.port.out.UserPersistencePort;
-import com.trendyol.trainingapi.infrastracture.common.UseCase;
+import com.trendyol.trainingapi.application.port.in.UserUseCase;
+import com.trendyol.trainingapi.application.port.out.UserPersistencePort;
+import com.trendyol.trainingapi.application.annotation.UseCase;
 import com.trendyol.trainingapi.infrastracture.rest.request.SearchCriteria;
 import com.trendyol.trainingapi.infrastracture.rest.response.UserResponse;
 import lombok.RequiredArgsConstructor;

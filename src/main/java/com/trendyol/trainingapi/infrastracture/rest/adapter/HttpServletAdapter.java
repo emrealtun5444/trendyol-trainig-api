@@ -1,8 +1,7 @@
 package com.trendyol.trainingapi.infrastracture.rest.adapter;
 
-import com.trendyol.trainingapi.domain.port.out.HttpServletPort;
-import com.trendyol.trainingapi.infrastracture.common.Adapter;
-import com.trendyol.trainingapi.infrastracture.common.Constants;
+import com.trendyol.trainingapi.application.port.out.HttpServletPort;
+import com.trendyol.trainingapi.application.annotation.Adapter;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 

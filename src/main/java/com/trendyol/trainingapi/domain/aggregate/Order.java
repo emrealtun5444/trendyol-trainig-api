@@ -1,5 +1,10 @@
-package com.trendyol.trainingapi.domain.entity;
+package com.trendyol.trainingapi.domain.aggregate;
 
+import com.trendyol.trainingapi.application.annotation.Aggregate;
+import com.trendyol.trainingapi.domain.entity.ItemCategory;
+import com.trendyol.trainingapi.domain.entity.OrderAddress;
+import com.trendyol.trainingapi.domain.entity.OrderItem;
+import com.trendyol.trainingapi.domain.entity.OrderStatus;
 import com.trendyol.trainingapi.infrastracture.rest.request.OrderRequest;
 import com.trendyol.trainingapi.infrastracture.rest.request.OrderUpdateRequest;
 import lombok.AllArgsConstructor;
@@ -11,6 +16,7 @@ import java.util.List;
 
 @Builder
 @Getter
+@Aggregate
 @NoArgsConstructor
 @AllArgsConstructor
 public class Order {

@@ -1,8 +1,8 @@
 package com.trendyol.trainingapi.infrastracture.persistence;
 
-import com.trendyol.trainingapi.domain.entity.User;
-import com.trendyol.trainingapi.domain.port.out.UserPersistencePort;
-import com.trendyol.trainingapi.infrastracture.common.Adapter;
+import com.trendyol.trainingapi.domain.aggregate.User;
+import com.trendyol.trainingapi.application.port.out.UserPersistencePort;
+import com.trendyol.trainingapi.application.annotation.Adapter;
 import com.trendyol.trainingapi.infrastracture.persistence.entity.UserEntity;
 import com.trendyol.trainingapi.infrastracture.persistence.repository.UserRepository;
 import com.trendyol.trainingapi.infrastracture.persistence.repository.UserSpecification;

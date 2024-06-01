@@ -1,4 +1,4 @@
-package com.trendyol.trainingapi.infrastracture.common;
+package com.trendyol.trainingapi.application.annotation;
 
 import org.springframework.core.annotation.AliasFor;
 import org.springframework.stereotype.Component;

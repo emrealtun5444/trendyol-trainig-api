@@ -1,7 +1,7 @@
 package com.trendyol.trainingapi.infrastracture.property;
 
-import com.trendyol.trainingapi.domain.port.out.RedisPropertyPort;
-import com.trendyol.trainingapi.infrastracture.common.Adapter;
+import com.trendyol.trainingapi.application.port.out.RedisPropertyPort;
+import com.trendyol.trainingapi.application.annotation.Adapter;
 import com.trendyol.trainingapi.infrastracture.common.property.RedisConfigProperties;
 import lombok.RequiredArgsConstructor;
 

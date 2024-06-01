@@ -1,7 +1,7 @@
-package com.trendyol.trainingapi.domain.port.out;
+package com.trendyol.trainingapi.application.port.out;
 
 
-import com.trendyol.trainingapi.domain.entity.User;
+import com.trendyol.trainingapi.domain.aggregate.User;
 import com.trendyol.trainingapi.infrastracture.rest.request.SearchCriteria;
 
 import java.util.List;

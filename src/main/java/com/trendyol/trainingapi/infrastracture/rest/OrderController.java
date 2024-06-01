@@ -1,16 +1,18 @@
 package com.trendyol.trainingapi.infrastracture.rest;
 
 
-import com.trendyol.trainingapi.domain.port.in.OrderItemUseCase;
-import com.trendyol.trainingapi.domain.port.in.OrderUseCase;
+import com.trendyol.trainingapi.domain.aggregate.Order;
+import com.trendyol.trainingapi.application.port.in.OrderItemUseCase;
+import com.trendyol.trainingapi.application.port.in.OrderUseCase;
 import com.trendyol.trainingapi.infrastracture.rest.request.OrderRequest;
 import com.trendyol.trainingapi.infrastracture.rest.request.OrderUpdateRequest;
-import com.trendyol.trainingapi.infrastracture.rest.response.OrderItemInfo;
+import com.trendyol.trainingapi.infrastracture.rest.response.OrderItemProjection;
 import com.trendyol.trainingapi.infrastracture.rest.response.OrderItemResponse;
 import com.trendyol.trainingapi.infrastracture.rest.response.OrderResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -30,6 +32,11 @@ public class OrderController {
     public ResponseEntity<Boolean> save(@RequestBody @Valid OrderRequest orderRequest) {
         orderUseCase.create(orderRequest);
         return ResponseEntity.ok(true);
+    }
+
+    @GetMapping("/orders")
+    public Page<Order> getOrders(@RequestParam int page, @RequestParam int size) {
+        return orderUseCase.getOrders(page, size);
     }
 
     @PutMapping("/{id}")
@@ -63,7 +70,7 @@ public class OrderController {
     }
 
     @GetMapping("/v2/items/{orderId}")
-    public ResponseEntity<List<OrderItemInfo>> getOrderItemInfosByOrderId(@PathVariable Long orderId) {
+    public ResponseEntity<List<OrderItemProjection>> getOrderItemInfosByOrderId(@PathVariable Long orderId) {
         final var orders = orderItemUseCase.getOrderItemInfosByOrderId(orderId);
         return ResponseEntity.ok(orders);
     }

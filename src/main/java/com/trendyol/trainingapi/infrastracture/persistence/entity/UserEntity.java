@@ -1,6 +1,6 @@
 package com.trendyol.trainingapi.infrastracture.persistence.entity;
 
-import com.trendyol.trainingapi.domain.entity.User;
+import com.trendyol.trainingapi.domain.aggregate.User;
 import com.trendyol.trainingapi.infrastracture.persistence.entity.common.AbstractEntity;
 import jakarta.persistence.*;
 import lombok.*;

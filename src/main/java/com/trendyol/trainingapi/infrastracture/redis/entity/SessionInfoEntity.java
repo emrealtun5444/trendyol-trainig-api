@@ -1,6 +1,6 @@
 package com.trendyol.trainingapi.infrastracture.redis.entity;
 
-import com.trendyol.trainingapi.domain.entity.SessionInfo;
+import com.trendyol.trainingapi.domain.valueobject.SessionInfo;
 import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.redis.core.RedisHash;

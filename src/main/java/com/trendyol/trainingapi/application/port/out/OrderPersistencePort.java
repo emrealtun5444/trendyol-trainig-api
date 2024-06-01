@@ -1,7 +1,8 @@
-package com.trendyol.trainingapi.domain.port.out;
+package com.trendyol.trainingapi.application.port.out;
 
 
-import com.trendyol.trainingapi.domain.entity.Order;
+import com.trendyol.trainingapi.domain.aggregate.Order;
+import org.springframework.data.domain.Page;
 
 import java.util.List;
 import java.util.Optional;
@@ -17,4 +18,6 @@ public interface OrderPersistencePort {
     Optional<Order> findOrderByJpql(Long id);
 
     List<Order> findOrders();
+
+    Page<Order> getOrders(int page, int size);
 }

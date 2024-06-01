@@ -1,7 +1,7 @@
 package com.trendyol.trainingapi.infrastracture.cache;
 
-import com.trendyol.trainingapi.domain.entity.SessionInfo;
-import com.trendyol.trainingapi.domain.port.out.SessionRequestScopeContextPort;
+import com.trendyol.trainingapi.domain.valueobject.SessionInfo;
+import com.trendyol.trainingapi.application.port.out.SessionRequestScopeContextPort;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.context.annotation.Scope;

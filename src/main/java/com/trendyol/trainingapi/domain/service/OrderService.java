@@ -1,9 +1,9 @@
 package com.trendyol.trainingapi.domain.service;
 
-import com.trendyol.trainingapi.domain.entity.Order;
-import com.trendyol.trainingapi.domain.port.in.OrderUseCase;
-import com.trendyol.trainingapi.domain.port.out.OrderPersistencePort;
-import com.trendyol.trainingapi.infrastracture.common.UseCase;
+import com.trendyol.trainingapi.domain.aggregate.Order;
+import com.trendyol.trainingapi.application.port.in.OrderUseCase;
+import com.trendyol.trainingapi.application.port.out.OrderPersistencePort;
+import com.trendyol.trainingapi.application.annotation.UseCase;
 import com.trendyol.trainingapi.infrastracture.common.exception.BusinessException;
 import com.trendyol.trainingapi.infrastracture.rest.request.OrderAddressModel;
 import com.trendyol.trainingapi.infrastracture.rest.request.OrderItemModel;
@@ -12,6 +12,7 @@ import com.trendyol.trainingapi.infrastracture.rest.request.OrderUpdateRequest;
 import com.trendyol.trainingapi.infrastracture.rest.response.OrderResponse;
 import com.trendyol.trainingapi.infrastracture.rest.response.OrderUserModel;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -54,9 +55,14 @@ public class OrderService implements OrderUseCase {
 
     @Transactional(readOnly = true)
     public List<OrderResponse> getOrders() {
-       // final var order = orderPersistencePort.findAll();
+        // final var order = orderPersistencePort.findAll();
         final var orders = orderPersistencePort.findOrders();
         return getOrderResponses(orders);
+    }
+
+    @Transactional(readOnly = true)
+    public Page<Order> getOrders(int page, int size) {
+        return orderPersistencePort.getOrders(page, size);
     }
 
     @Transactional(readOnly = true)

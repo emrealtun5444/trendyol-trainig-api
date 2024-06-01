@@ -1,4 +1,4 @@
-package com.trendyol.trainingapi.domain.port.in;
+package com.trendyol.trainingapi.application.port.in;
 
 import com.trendyol.trainingapi.infrastracture.rest.request.SearchCriteria;
 import com.trendyol.trainingapi.infrastracture.rest.response.UserResponse;
