@@ -25,7 +25,7 @@ public class UserController {
     private final UserUseCase userUseCase;
 
     @PostMapping("search")
-    public ResponseEntity<List<UserResponse>> save(@RequestBody @Valid List<SearchCriteria> criteriaList) {
+    public ResponseEntity<List<UserResponse>> search(@RequestBody @Valid List<SearchCriteria> criteriaList) {
         return ResponseEntity.ok(userUseCase.findUserByGivenCriteria(criteriaList));
     }
 
