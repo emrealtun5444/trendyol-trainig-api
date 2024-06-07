@@ -1,16 +1,23 @@
 server:
   port: 8080
   max-http-request-header-size: 16KB
-
 spring:
   datasource:
     hikari:
-      connection-timeout: 3000
-      maximum-pool-size: 5
-      idle-timeout: 0
-      max-lifetime: 58000
-      minimum-idle: 0
+      maximum-pool-size: 20
+      minimum-idle: 5
+      idle-timeout: 30000
+      max-lifetime: 600000
+      connection-timeout: 30000
   jpa:
+    properties:
+      hibernate:
+        jdbc:
+          batch_size: 20
+          batch_versioned_data: true
+        order_inserts: true
+        order_updates: true
+        generate_statistics: true
     open-in-view: false
   liquibase:
     change-log: classpath:/liquibase/changelog/changelog-master.xml
