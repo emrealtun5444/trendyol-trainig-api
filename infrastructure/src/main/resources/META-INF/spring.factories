@@ -1,1 +1,1 @@
-org.springframework.boot.env.PropertySourceLoader=com.trendyol.trainingapi.infrastracture.common.configuration.JsonPropertySourceLoader
+org.springframework.boot.env.PropertySourceLoader=com.trendyol.training.infrastructure.common.configuration.JsonPropertySourceLoader
