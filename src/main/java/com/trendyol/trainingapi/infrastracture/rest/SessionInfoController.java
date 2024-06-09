@@ -2,7 +2,7 @@ package com.trendyol.trainingapi.infrastracture.rest;
 
 import com.trendyol.trainingapi.domain.valueobject.SessionInfo;
 import com.trendyol.trainingapi.domain.model.SessionInfoCreateModel;
-import com.trendyol.trainingapi.application.port.in.SessionUseCase;
+import com.trendyol.trainingapi.application.usecase.SessionUseCase;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

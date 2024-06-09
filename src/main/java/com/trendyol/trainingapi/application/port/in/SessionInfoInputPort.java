@@ -1,8 +1,8 @@
-package com.trendyol.trainingapi.domain.service;
+package com.trendyol.trainingapi.application.port.in;
 
 import com.trendyol.trainingapi.domain.valueobject.SessionInfo;
 import com.trendyol.trainingapi.domain.model.SessionInfoCreateModel;
-import com.trendyol.trainingapi.application.port.in.SessionUseCase;
+import com.trendyol.trainingapi.application.usecase.SessionUseCase;
 import com.trendyol.trainingapi.application.port.out.HttpServletPort;
 import com.trendyol.trainingapi.application.port.out.RedisPropertyPort;
 import com.trendyol.trainingapi.application.port.out.SessionPort;
@@ -20,7 +20,7 @@ import java.util.UUID;
 
 @Service
 @AllArgsConstructor
-public class SessionInfoService implements SessionUseCase {
+public class SessionInfoInputPort implements SessionUseCase {
 
     private final SessionPort sessionPort;
     private final RedisPropertyPort redisPropertyPort;

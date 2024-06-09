@@ -1,16 +1,16 @@
-package com.trendyol.trainingapi.domain.service;
+package com.trendyol.trainingapi.application.port.in;
 
 import com.trendyol.trainingapi.application.annotation.UseCase;
-import com.trendyol.trainingapi.application.port.in.OrderUseCase;
+import com.trendyol.trainingapi.application.usecase.OrderUseCase;
 import com.trendyol.trainingapi.application.port.out.OrderPersistencePort;
 import com.trendyol.trainingapi.domain.aggregate.Order;
 import com.trendyol.trainingapi.infrastracture.common.exception.BusinessException;
-import com.trendyol.trainingapi.infrastracture.rest.request.OrderAddressModel;
-import com.trendyol.trainingapi.infrastracture.rest.request.OrderItemModel;
-import com.trendyol.trainingapi.infrastracture.rest.request.OrderRequest;
-import com.trendyol.trainingapi.infrastracture.rest.request.OrderUpdateRequest;
-import com.trendyol.trainingapi.infrastracture.rest.response.OrderResponse;
-import com.trendyol.trainingapi.infrastracture.rest.response.OrderUserModel;
+import com.trendyol.trainingapi.application.dto.request.OrderAddressModel;
+import com.trendyol.trainingapi.application.dto.request.OrderItemModel;
+import com.trendyol.trainingapi.application.dto.request.OrderRequest;
+import com.trendyol.trainingapi.application.dto.request.OrderUpdateRequest;
+import com.trendyol.trainingapi.application.dto.response.OrderResponse;
+import com.trendyol.trainingapi.application.dto.response.OrderUserModel;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
@@ -22,7 +22,7 @@ import java.util.stream.Collectors;
 @UseCase
 @Service
 @RequiredArgsConstructor
-public class OrderService implements OrderUseCase {
+public class OrderInputPort implements OrderUseCase {
 
     private final OrderPersistencePort orderPersistencePort;
 

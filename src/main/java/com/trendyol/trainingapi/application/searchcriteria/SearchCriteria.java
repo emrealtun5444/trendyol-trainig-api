@@ -1,4 +1,4 @@
-package com.trendyol.trainingapi.infrastracture.rest.request;
+package com.trendyol.trainingapi.application.searchcriteria;
 
 import com.trendyol.trainingapi.infrastracture.common.enm.SearchOperation;
 import jakarta.validation.constraints.NotEmpty;

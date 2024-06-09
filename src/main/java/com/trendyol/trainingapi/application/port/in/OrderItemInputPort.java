@@ -1,10 +1,10 @@
-package com.trendyol.trainingapi.domain.service;
+package com.trendyol.trainingapi.application.port.in;
 
 import com.trendyol.trainingapi.application.annotation.UseCase;
-import com.trendyol.trainingapi.application.port.in.OrderItemUseCase;
+import com.trendyol.trainingapi.application.usecase.OrderItemUseCase;
 import com.trendyol.trainingapi.application.port.out.OrderItemPersistencePort;
-import com.trendyol.trainingapi.infrastracture.rest.response.OrderItemProjection;
-import com.trendyol.trainingapi.infrastracture.rest.response.OrderItemResponse;
+import com.trendyol.trainingapi.application.dto.response.OrderItemProjection;
+import com.trendyol.trainingapi.application.dto.response.OrderItemResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +13,7 @@ import java.util.List;
 @UseCase
 @Service
 @RequiredArgsConstructor
-public class OrderItemService implements OrderItemUseCase {
+public class OrderItemInputPort implements OrderItemUseCase {
 
     private final OrderItemPersistencePort orderItemPersistencePort;
 

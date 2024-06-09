@@ -2,13 +2,13 @@ package com.trendyol.trainingapi.infrastracture.rest;
 
 
 import com.trendyol.trainingapi.domain.aggregate.Order;
-import com.trendyol.trainingapi.application.port.in.OrderItemUseCase;
-import com.trendyol.trainingapi.application.port.in.OrderUseCase;
-import com.trendyol.trainingapi.infrastracture.rest.request.OrderRequest;
-import com.trendyol.trainingapi.infrastracture.rest.request.OrderUpdateRequest;
-import com.trendyol.trainingapi.infrastracture.rest.response.OrderItemProjection;
-import com.trendyol.trainingapi.infrastracture.rest.response.OrderItemResponse;
-import com.trendyol.trainingapi.infrastracture.rest.response.OrderResponse;
+import com.trendyol.trainingapi.application.usecase.OrderItemUseCase;
+import com.trendyol.trainingapi.application.usecase.OrderUseCase;
+import com.trendyol.trainingapi.application.dto.request.OrderRequest;
+import com.trendyol.trainingapi.application.dto.request.OrderUpdateRequest;
+import com.trendyol.trainingapi.application.dto.response.OrderItemProjection;
+import com.trendyol.trainingapi.application.dto.response.OrderItemResponse;
+import com.trendyol.trainingapi.application.dto.response.OrderResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

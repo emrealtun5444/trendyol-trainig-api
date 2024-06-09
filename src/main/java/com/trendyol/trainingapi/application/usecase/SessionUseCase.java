@@ -1,4 +1,4 @@
-package com.trendyol.trainingapi.application.port.in;
+package com.trendyol.trainingapi.application.usecase;
 
 import com.trendyol.trainingapi.domain.valueobject.SessionInfo;
 import com.trendyol.trainingapi.domain.model.SessionInfoCreateModel;

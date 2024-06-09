@@ -1,10 +1,10 @@
-package com.trendyol.trainingapi.domain.service;
+package com.trendyol.trainingapi.application.port.in;
 
 import com.trendyol.trainingapi.application.annotation.UseCase;
-import com.trendyol.trainingapi.application.port.in.UserUseCase;
+import com.trendyol.trainingapi.application.usecase.UserUseCase;
 import com.trendyol.trainingapi.application.port.out.UserPersistencePort;
-import com.trendyol.trainingapi.infrastracture.rest.request.SearchCriteria;
-import com.trendyol.trainingapi.infrastracture.rest.response.UserResponse;
+import com.trendyol.trainingapi.application.searchcriteria.SearchCriteria;
+import com.trendyol.trainingapi.application.dto.response.UserResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 @UseCase
 @Service
 @RequiredArgsConstructor
-public class UserService implements UserUseCase {
+public class UserInputPort implements UserUseCase {
 
     private final UserPersistencePort userPersistencePort;
 

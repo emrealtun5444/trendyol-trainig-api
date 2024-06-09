@@ -6,7 +6,7 @@ import com.trendyol.trainingapi.application.annotation.Adapter;
 import com.trendyol.trainingapi.infrastracture.persistence.entity.UserEntity;
 import com.trendyol.trainingapi.infrastracture.persistence.repository.UserRepository;
 import com.trendyol.trainingapi.infrastracture.persistence.repository.UserSpecification;
-import com.trendyol.trainingapi.infrastracture.rest.request.SearchCriteria;
+import com.trendyol.trainingapi.application.searchcriteria.SearchCriteria;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.transaction.annotation.Transactional;

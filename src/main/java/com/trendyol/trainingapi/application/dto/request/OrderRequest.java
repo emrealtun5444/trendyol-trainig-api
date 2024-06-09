@@ -1,4 +1,4 @@
-package com.trendyol.trainingapi.infrastracture.rest.request;
+package com.trendyol.trainingapi.application.dto.request;
 
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;

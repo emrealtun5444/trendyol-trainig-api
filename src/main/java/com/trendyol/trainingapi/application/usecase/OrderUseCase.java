@@ -1,9 +1,9 @@
-package com.trendyol.trainingapi.application.port.in;
+package com.trendyol.trainingapi.application.usecase;
 
 import com.trendyol.trainingapi.domain.aggregate.Order;
-import com.trendyol.trainingapi.infrastracture.rest.request.OrderRequest;
-import com.trendyol.trainingapi.infrastracture.rest.request.OrderUpdateRequest;
-import com.trendyol.trainingapi.infrastracture.rest.response.OrderResponse;
+import com.trendyol.trainingapi.application.dto.request.OrderRequest;
+import com.trendyol.trainingapi.application.dto.request.OrderUpdateRequest;
+import com.trendyol.trainingapi.application.dto.response.OrderResponse;
 import org.springframework.data.domain.Page;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.trendyol.trainingapi.infrastracture.rest.response;
+package com.trendyol.trainingapi.application.dto.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -7,11 +7,9 @@ import lombok.NoArgsConstructor;
 
 @Builder
 @Getter
-@AllArgsConstructor
 @NoArgsConstructor
-public class UserResponse {
-
-    private String userName;
+@AllArgsConstructor
+public class OrderUserModel {
 
     private String nameSurname;
 

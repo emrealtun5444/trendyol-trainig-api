@@ -3,8 +3,8 @@ package com.trendyol.trainingapi.infrastracture.persistence;
 import com.trendyol.trainingapi.application.port.out.OrderItemPersistencePort;
 import com.trendyol.trainingapi.application.annotation.Adapter;
 import com.trendyol.trainingapi.infrastracture.persistence.repository.OrderItemRepository;
-import com.trendyol.trainingapi.infrastracture.rest.response.OrderItemProjection;
-import com.trendyol.trainingapi.infrastracture.rest.response.OrderItemResponse;
+import com.trendyol.trainingapi.application.dto.response.OrderItemProjection;
+import com.trendyol.trainingapi.application.dto.response.OrderItemResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.transaction.annotation.Transactional;
 

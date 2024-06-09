@@ -1,4 +1,4 @@
-package com.trendyol.trainingapi.infrastracture.rest.response;
+package com.trendyol.trainingapi.application.dto.response;
 
 import com.trendyol.trainingapi.infrastracture.persistence.entity.enm.Category;
 import com.trendyol.trainingapi.infrastracture.persistence.entity.enm.Status;

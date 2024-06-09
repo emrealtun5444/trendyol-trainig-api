@@ -1,7 +1,7 @@
-package com.trendyol.trainingapi.infrastracture.rest.response;
+package com.trendyol.trainingapi.application.dto.response;
 
-import com.trendyol.trainingapi.infrastracture.rest.request.OrderAddressModel;
-import com.trendyol.trainingapi.infrastracture.rest.request.OrderItemModel;
+import com.trendyol.trainingapi.application.dto.request.OrderAddressModel;
+import com.trendyol.trainingapi.application.dto.request.OrderItemModel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
