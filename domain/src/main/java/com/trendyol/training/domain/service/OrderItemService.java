@@ -2,7 +2,11 @@ package com.trendyol.training.domain.service;
 
 
 
-import com.trendyol.training.domain.annotation.UseCase;
+import com.trendyol.training.application.annotation.UseCase;
+import com.trendyol.training.application.port.in.OrderItemUseCase;
+import com.trendyol.training.application.port.out.OrderItemPersistencePort;
+import com.trendyol.training.infrastructure.rest.response.OrderItemProjection;
+import com.trendyol.training.infrastructure.rest.response.OrderItemResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

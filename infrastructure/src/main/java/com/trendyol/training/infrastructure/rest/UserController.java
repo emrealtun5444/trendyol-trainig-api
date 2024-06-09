@@ -1,9 +1,9 @@
 package com.trendyol.training.infrastructure.rest;
 
 
-import com.trendyol.training.domain.model.request.SearchCriteria;
+import com.trendyol.training.infrastructure.rest.request.SearchCriteria;
 import com.trendyol.training.application.port.in.UserUseCase;
-import com.trendyol.training.domain.model.response.UserResponse;
+import com.trendyol.training.infrastructure.rest.response.UserResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

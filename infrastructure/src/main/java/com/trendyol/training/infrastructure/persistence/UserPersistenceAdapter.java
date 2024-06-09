@@ -7,7 +7,7 @@ import com.trendyol.training.domain.aggregate.User;
 import com.trendyol.training.infrastructure.persistence.entity.UserEntity;
 import com.trendyol.training.infrastructure.persistence.repository.UserRepository;
 import com.trendyol.training.infrastructure.persistence.repository.UserSpecification;
-import com.trendyol.training.domain.model.request.SearchCriteria;
+import com.trendyol.training.infrastructure.rest.request.SearchCriteria;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.transaction.annotation.Transactional;

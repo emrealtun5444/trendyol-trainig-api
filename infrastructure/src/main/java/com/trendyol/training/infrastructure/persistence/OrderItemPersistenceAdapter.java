@@ -1,10 +1,10 @@
 package com.trendyol.training.infrastructure.persistence;
 
-import com.trendyol.training.domain.model.response.OrderItemResponse;
+import com.trendyol.training.infrastructure.rest.response.OrderItemResponse;
 import com.trendyol.training.application.port.out.OrderItemPersistencePort;
 import com.trendyol.training.application.annotation.Adapter;
 import com.trendyol.training.infrastructure.persistence.repository.OrderItemRepository;
-import com.trendyol.training.domain.model.response.OrderItemProjection;
+import com.trendyol.training.infrastructure.rest.response.OrderItemProjection;
 import lombok.RequiredArgsConstructor;
 import org.springframework.transaction.annotation.Transactional;
 

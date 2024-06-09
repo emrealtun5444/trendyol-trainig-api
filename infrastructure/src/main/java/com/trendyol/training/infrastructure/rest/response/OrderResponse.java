@@ -1,7 +1,7 @@
-package com.trendyol.training.domain.model.response;
+package com.trendyol.training.infrastructure.rest.response;
 
-import com.trendyol.training.domain.model.request.OrderAddressModel;
-import com.trendyol.training.domain.model.request.OrderItemModel;
+import com.trendyol.training.infrastructure.rest.request.OrderAddressModel;
+import com.trendyol.training.infrastructure.rest.request.OrderItemModel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;

@@ -1,4 +1,4 @@
-package com.trendyol.training.domain.model.response;
+package com.trendyol.training.infrastructure.rest.response;
 
 import com.trendyol.training.infrastructure.persistence.entity.enm.Category;
 import lombok.AllArgsConstructor;
