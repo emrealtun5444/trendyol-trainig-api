@@ -2,7 +2,7 @@ package com.trendyol.training.application.port.out;
 
 
 import com.trendyol.training.domain.aggregate.User;
-import com.trendyol.training.infrastructure.rest.request.SearchCriteria;
+import com.trendyol.training.application.searchcriteria.SearchCriteria;
 
 import java.util.List;
 

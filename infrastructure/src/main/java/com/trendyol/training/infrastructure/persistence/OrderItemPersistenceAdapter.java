@@ -1,16 +1,14 @@
 package com.trendyol.training.infrastructure.persistence;
 
-import com.trendyol.training.infrastructure.rest.response.OrderItemResponse;
+import com.trendyol.training.application.dto.OrderItemResponse;
 import com.trendyol.training.application.port.out.OrderItemPersistencePort;
-import com.trendyol.training.application.annotation.Adapter;
 import com.trendyol.training.infrastructure.persistence.repository.OrderItemRepository;
-import com.trendyol.training.infrastructure.rest.response.OrderItemProjection;
+import com.trendyol.training.application.dto.OrderItemProjection;
 import lombok.RequiredArgsConstructor;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-@Adapter
 @RequiredArgsConstructor
 public class OrderItemPersistenceAdapter implements OrderItemPersistencePort {
 

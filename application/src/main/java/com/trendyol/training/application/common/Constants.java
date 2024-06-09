@@ -1,4 +1,4 @@
-package com.trendyol.training.infrastructure.common;
+package com.trendyol.training.application.common;
 
 public class Constants {
     public static class Headers {

@@ -1,6 +1,6 @@
-package com.trendyol.training.infrastructure.rest.request;
+package com.trendyol.training.application.searchcriteria;
 
-import com.trendyol.training.infrastructure.common.enm.SearchOperation;
+import com.trendyol.training.domain.enm.SearchOperation;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;

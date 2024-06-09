@@ -1,6 +1,6 @@
 package com.trendyol.training.infrastructure.persistence.repository;
 
-import com.trendyol.training.infrastructure.rest.request.SearchCriteria;
+import com.trendyol.training.application.searchcriteria.SearchCriteria;
 import com.trendyol.training.infrastructure.persistence.entity.UserEntity;
 import org.springframework.data.jpa.domain.Specification;
 

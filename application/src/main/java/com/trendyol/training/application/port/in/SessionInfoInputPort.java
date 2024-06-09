@@ -1,16 +1,16 @@
-package com.trendyol.training.domain.service;
+package com.trendyol.training.application.port.in;
 
-import com.trendyol.training.application.port.in.SessionUseCase;
+import com.trendyol.training.application.common.Constants;
+import com.trendyol.training.application.usecase.SessionUseCase;
 import com.trendyol.training.application.port.out.HttpServletPort;
 import com.trendyol.training.application.port.out.RedisPropertyPort;
 import com.trendyol.training.application.port.out.SessionPort;
 import com.trendyol.training.application.port.out.SessionRequestScopeContextPort;
+import com.trendyol.training.domain.exception.BusinessException;
+import com.trendyol.training.domain.exception.NoActiveSessionFoundException;
+import com.trendyol.training.domain.exception.SessionIdNotFoundException;
 import com.trendyol.training.domain.valueobject.SessionInfo;
 import com.trendyol.training.domain.model.SessionInfoCreateModel;
-import com.trendyol.training.infrastructure.common.Constants;
-import com.trendyol.training.infrastructure.common.exception.BusinessException;
-import com.trendyol.training.infrastructure.common.exception.NoActiveSessionFoundException;
-import com.trendyol.training.infrastructure.common.exception.SessionIdNotFoundException;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -20,7 +20,7 @@ import java.util.UUID;
 
 @Service
 @AllArgsConstructor
-public class SessionInfoService implements SessionUseCase {
+public class SessionInfoInputPort implements SessionUseCase {
 
     private final SessionPort sessionPort;
     private final RedisPropertyPort redisPropertyPort;

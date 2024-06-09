@@ -1,5 +1,6 @@
-package com.trendyol.training.infrastructure.common.exception;
+package com.trendyol.training.domain.exception;
 
+import com.trendyol.training.domain.exception.BaseTrendyolException;
 import lombok.Getter;
 
 @Getter

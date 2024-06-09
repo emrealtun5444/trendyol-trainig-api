@@ -1,4 +1,6 @@
-package com.trendyol.training.infrastructure.common.exception;
+package com.trendyol.training.domain.exception;
+
+import com.trendyol.training.domain.exception.BaseTrendyolException;
 
 public class NoActiveSessionFoundException extends BaseTrendyolException {
     private final static String DEFAULT_ERROR_KEY = "no.active.session.found";

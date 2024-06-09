@@ -1,7 +1,5 @@
-package com.trendyol.training.infrastructure.rest.response;
+package com.trendyol.training.application.dto;
 
-import com.trendyol.training.infrastructure.persistence.entity.enm.Category;
-import com.trendyol.training.infrastructure.persistence.entity.enm.Status;
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -9,7 +7,7 @@ import java.util.Date;
 public interface OrderItemProjection {
     Date getCreatedDate();
 
-    Category getCategory();
+    String getCategory();
 
     String getProductCode();
 
@@ -22,6 +20,7 @@ public interface OrderItemProjection {
     OrderInfo getOrder();
 
     interface OrderInfo {
-        Status getStatus();
+        String getStatus();
     }
+
 }

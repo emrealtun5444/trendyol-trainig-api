@@ -1,5 +1,6 @@
 package com.trendyol.training.infrastructure.common.exception;
 
+import com.trendyol.training.domain.exception.BusinessException;
 import com.trendyol.training.infrastructure.common.exception.model.ErrorDetailResponse;
 import com.trendyol.training.infrastructure.common.exception.model.ErrorResponse;
 import lombok.RequiredArgsConstructor;

@@ -1,14 +1,15 @@
 package com.trendyol.training.infrastructure.rest;
 
 
-import com.trendyol.training.infrastructure.rest.request.OrderRequest;
-import com.trendyol.training.infrastructure.rest.request.OrderUpdateRequest;
-import com.trendyol.training.infrastructure.rest.response.OrderItemResponse;
+import com.trendyol.training.application.dto.PageImpl;
+import com.trendyol.training.domain.model.OrderRequest;
+import com.trendyol.training.domain.model.OrderUpdateRequest;
+import com.trendyol.training.application.dto.OrderItemResponse;
 import com.trendyol.training.domain.aggregate.Order;
-import com.trendyol.training.application.port.in.OrderItemUseCase;
-import com.trendyol.training.application.port.in.OrderUseCase;
-import com.trendyol.training.infrastructure.rest.response.OrderItemProjection;
-import com.trendyol.training.infrastructure.rest.response.OrderResponse;
+import com.trendyol.training.application.usecase.OrderItemUseCase;
+import com.trendyol.training.application.usecase.OrderUseCase;
+import com.trendyol.training.application.dto.OrderItemProjection;
+import com.trendyol.training.application.dto.OrderResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -35,7 +36,7 @@ public class OrderController {
     }
 
     @GetMapping("/orders")
-    public Page<Order> getOrders(@RequestParam int page, @RequestParam int size) {
+    public PageImpl<Order> getOrders(@RequestParam int page, @RequestParam int size) {
         return orderUseCase.getOrders(page, size);
     }
 

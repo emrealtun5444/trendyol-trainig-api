@@ -1,4 +1,4 @@
-package com.trendyol.training.infrastructure.rest.request;
+package com.trendyol.training.domain.model;
 
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;

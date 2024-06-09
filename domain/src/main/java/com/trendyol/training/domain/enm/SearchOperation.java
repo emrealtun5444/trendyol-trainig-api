@@ -1,4 +1,4 @@
-package com.trendyol.training.infrastructure.common.enm;
+package com.trendyol.training.domain.enm;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

@@ -1,8 +1,8 @@
 package com.trendyol.training.infrastructure.persistence;
 
+import com.trendyol.training.application.dto.PageImpl;
 import com.trendyol.training.domain.aggregate.Order;
 import com.trendyol.training.application.port.out.OrderPersistencePort;
-import com.trendyol.training.application.annotation.Adapter;
 import com.trendyol.training.infrastructure.persistence.entity.OrderEntity;
 import com.trendyol.training.infrastructure.persistence.repository.OrderRepository;
 import lombok.RequiredArgsConstructor;
@@ -17,7 +17,6 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-@Adapter
 @RequiredArgsConstructor
 public class OrderPersistenceAdapter implements OrderPersistencePort {
 
@@ -56,9 +55,10 @@ public class OrderPersistenceAdapter implements OrderPersistencePort {
 
     @Override
     @Transactional(readOnly = true)
-    public Page<Order> getOrders(int page, int size) {
+    public PageImpl<Order> getOrders(int page, int size) {
         Pageable pageable = PageRequest.of(page, size);
         final var ordersPageable = orderRepository.findOrders(pageable);
-        return ordersPageable.map(OrderEntity::toOrder);
+        final var orderModels = ordersPageable.getContent().stream().map(OrderEntity::toOrder).collect(Collectors.toList());
+        return new PageImpl<Order>(ordersPageable.getTotalElements(), orderModels);
     }
 }

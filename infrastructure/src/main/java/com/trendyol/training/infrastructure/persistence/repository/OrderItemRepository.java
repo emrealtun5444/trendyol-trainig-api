@@ -1,8 +1,8 @@
 package com.trendyol.training.infrastructure.persistence.repository;
 
-import com.trendyol.training.infrastructure.rest.response.OrderItemResponse;
+import com.trendyol.training.application.dto.OrderItemResponse;
 import com.trendyol.training.infrastructure.persistence.entity.OrderItemEntity;
-import com.trendyol.training.infrastructure.rest.response.OrderItemProjection;
+import com.trendyol.training.application.dto.OrderItemProjection;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

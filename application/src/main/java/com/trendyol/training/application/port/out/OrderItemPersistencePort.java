@@ -2,8 +2,8 @@ package com.trendyol.training.application.port.out;
 
 
 
-import com.trendyol.training.infrastructure.rest.response.OrderItemProjection;
-import com.trendyol.training.infrastructure.rest.response.OrderItemResponse;
+import com.trendyol.training.application.dto.OrderItemProjection;
+import com.trendyol.training.application.dto.OrderItemResponse;
 
 import java.util.List;
 

@@ -22,6 +22,7 @@
       <module name="domain" options="-parameters" />
       <module name="infrastructure" options="-parameters" />
       <module name="training-api" options="-parameters" />
+      <module name="trendyol-training-api" options="" />
     </option>
   </component>
 </project>

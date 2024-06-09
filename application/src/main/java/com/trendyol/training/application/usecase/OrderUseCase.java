@@ -1,10 +1,10 @@
-package com.trendyol.training.application.port.in;
+package com.trendyol.training.application.usecase;
 
+import com.trendyol.training.application.dto.PageImpl;
 import com.trendyol.training.domain.aggregate.Order;
-import com.trendyol.training.infrastructure.rest.request.OrderRequest;
-import com.trendyol.training.infrastructure.rest.request.OrderUpdateRequest;
-import com.trendyol.training.infrastructure.rest.response.OrderResponse;
-import org.springframework.data.domain.Page;
+import com.trendyol.training.domain.model.OrderRequest;
+import com.trendyol.training.domain.model.OrderUpdateRequest;
+import com.trendyol.training.application.dto.OrderResponse;
 
 import java.util.List;
 
@@ -20,6 +20,6 @@ public interface OrderUseCase {
 
     OrderResponse getOrderById(Long id);
 
-    Page<Order> getOrders(int page, int size);
+    PageImpl<Order> getOrders(int page, int size);
 
 }

@@ -1,28 +1,26 @@
-package com.trendyol.training.domain.service;
+package com.trendyol.training.application.port.in;
 
-import com.trendyol.training.application.annotation.UseCase;
-import com.trendyol.training.application.port.in.OrderUseCase;
+import com.trendyol.training.application.dto.PageImpl;
+import com.trendyol.training.application.usecase.OrderUseCase;
 import com.trendyol.training.application.port.out.OrderPersistencePort;
 import com.trendyol.training.domain.aggregate.Order;
-import com.trendyol.training.infrastructure.common.exception.BusinessException;
-import com.trendyol.training.infrastructure.rest.request.OrderAddressModel;
-import com.trendyol.training.infrastructure.rest.request.OrderItemModel;
-import com.trendyol.training.infrastructure.rest.request.OrderRequest;
-import com.trendyol.training.infrastructure.rest.request.OrderUpdateRequest;
-import com.trendyol.training.infrastructure.rest.response.OrderResponse;
-import com.trendyol.training.infrastructure.rest.response.OrderUserModel;
+import com.trendyol.training.domain.exception.BusinessException;
+import com.trendyol.training.domain.model.OrderAddressModel;
+import com.trendyol.training.domain.model.OrderItemModel;
+import com.trendyol.training.domain.model.OrderRequest;
+import com.trendyol.training.domain.model.OrderUpdateRequest;
+import com.trendyol.training.application.dto.OrderResponse;
+import com.trendyol.training.application.dto.OrderUserModel;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@UseCase
 @Service
 @RequiredArgsConstructor
-public class OrderService implements OrderUseCase {
+public class OrderInputPort implements OrderUseCase {
 
     private final OrderPersistencePort orderPersistencePort;
 
@@ -53,7 +51,7 @@ public class OrderService implements OrderUseCase {
         return getOrderResponses(orders);
     }
 
-    public Page<Order> getOrders(int page, int size) {
+    public PageImpl<Order> getOrders(int page, int size) {
         return orderPersistencePort.getOrders(page, size);
     }
 
