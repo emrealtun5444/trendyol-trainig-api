@@ -17,7 +17,10 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "order_item")
+@Table(name = "order_item", indexes = {
+        @Index(name = "idx_order_item_order_id", columnList = "order_id"),
+        @Index(name = "idx_order_item_product_code", columnList = "product_code")
+})
 public class OrderItemEntity extends AbstractEntity {
 
     @Id

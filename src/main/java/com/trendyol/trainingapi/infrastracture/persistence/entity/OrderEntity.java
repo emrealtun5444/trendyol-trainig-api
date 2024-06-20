@@ -23,7 +23,10 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "orders")
+@Table(name = "orders", indexes = {
+        @Index(name = "idx_orders_status", columnList = "status"),
+        @Index(name = "idx_orders_user_id_status", columnList = "user_id, status")
+})
 public class OrderEntity extends AbstractEntity {
 
     @Id

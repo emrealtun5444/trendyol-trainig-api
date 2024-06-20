@@ -131,4 +131,13 @@
 
     </changeSet>
 
+    <changeSet author="Emre ALTUN" id="create_tables_indx">
+        <sql>
+            CREATE INDEX idx_orders_status ON orders(status);
+            CREATE INDEX idx_orders_user_id_status ON orders(user_id, status);
+            CREATE INDEX idx_order_item_order_id ON order_item(order_id);
+            CREATE INDEX idx_order_item_product_code ON order_item(product_code);
+        </sql>
+    </changeSet>
+
 </databaseChangeLog>
