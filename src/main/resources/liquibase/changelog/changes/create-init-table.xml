@@ -8,7 +8,7 @@
         <createSequence sequenceName="users_id_seq" cycle="false" minValue="10" maxValue="9223372036854775807" startValue="10" incrementBy="1"/>
         <createSequence sequenceName="fulfilment_address_id_seq" cycle="false" minValue="10" maxValue="9223372036854775807" startValue="10" incrementBy="1"/>
         <createSequence sequenceName="orders_id_seq" cycle="false" minValue="10" maxValue="9223372036854775807" startValue="10" incrementBy="1"/>
-        <createSequence sequenceName="order_item_id_seq" cycle="false" minValue="10" maxValue="9223372036854775807" startValue="10" incrementBy="1"/>
+        <createSequence sequenceName="order_item_id_seq" cycle="false" minValue="10" maxValue="9223372036854775807" startValue="10" incrementBy="10"/>
     </changeSet>
 
     <changeSet author="Emre ALTUN" id="create_init_tables">

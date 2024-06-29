@@ -11,7 +11,7 @@ import java.util.List;
 
 public interface OrderItemRepository extends JpaRepository<OrderItemEntity, Long> {
 
-    @Query("select new com.trendyol.trainingapi.infrastracture.rest.response.OrderItemResponse(" +
+    @Query("select new com.trendyol.trainingapi.application.dto.response.OrderItemResponse(" +
             "it.productCode, it.productName, it.category, it.quantity, it.price" +
             ") " +
             "from OrderItemEntity it " +
