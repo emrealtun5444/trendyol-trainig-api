@@ -23,7 +23,7 @@ public interface OrderRepository extends JpaRepository<OrderEntity, Long> {
     Optional<OrderEntity> findOrderEntityById(Long id);
 
     @Query("select o from OrderEntity o join fetch o.user join fetch o.fulfilmentAddress")
-   // @Query("select o from Order o join fetch o.user join fetch o.fulfilmentAddress join fetch o.orderItems")
+   // @Query("select o from OrderEntity o join fetch o.user join fetch o.fulfilmentAddress join fetch o.orderItems")
     List<OrderEntity> findOrders();
 
     @Query("select o from OrderEntity o join fetch o.user join fetch o.fulfilmentAddress")

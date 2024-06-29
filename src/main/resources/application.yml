@@ -12,6 +12,7 @@ spring:
   jpa:
     properties:
       hibernate:
+        format_sql: true
         jdbc:
           batch_size: 20
           batch_versioned_data: true

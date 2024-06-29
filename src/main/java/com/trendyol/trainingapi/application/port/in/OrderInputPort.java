@@ -48,7 +48,6 @@ public class OrderInputPort implements OrderUseCase {
     }
 
     public List<OrderResponse> getOrders() {
-        // final var order = orderPersistencePort.findAll();
         final var orders = orderPersistencePort.findOrders();
         return getOrderResponses(orders);
     }
@@ -58,8 +57,8 @@ public class OrderInputPort implements OrderUseCase {
     }
 
     public OrderResponse getOrderById(Long id) {
-        // final var order = orderPersistencePort.findById(id);
-        final var order = orderPersistencePort.findOrderByJpql(id);
+        final var order = orderPersistencePort.findById(id);
+        //final var order = orderPersistencePort.findOrderByJpql(id);
         return order.map(value -> getOrderResponses(Collections.singletonList(value)).get(0)).orElse(null);
     }
 

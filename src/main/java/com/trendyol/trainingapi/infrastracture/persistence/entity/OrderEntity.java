@@ -12,6 +12,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.BatchSize;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 
@@ -49,10 +50,10 @@ public class OrderEntity extends AbstractEntity {
 
     @Builder.Default
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "order", cascade = CascadeType.PERSIST)
-    //@Fetch(FetchMode.SUBSELECT)
-    @Fetch(FetchMode.JOIN)
+    @Fetch(FetchMode.SUBSELECT)
+    //@Fetch(FetchMode.JOIN)
     //@Fetch(FetchMode.SELECT)
-    //@BatchSize(size=2)
+    @BatchSize(size=2)
     private Set<OrderItemEntity> orderItems = new LinkedHashSet<>();
 
     public static OrderEntity create(Order orderRequest) {

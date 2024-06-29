@@ -12,6 +12,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Builder
@@ -25,7 +26,8 @@ public class Order {
     private User user;
     private OrderStatus status;
     private OrderAddress addressInfo;
-    private List<OrderItem> orderItems;
+    @Builder.Default
+    private List<OrderItem> orderItems = new ArrayList<>();
 
     public static Order create(OrderRequest orderRequest) {
 

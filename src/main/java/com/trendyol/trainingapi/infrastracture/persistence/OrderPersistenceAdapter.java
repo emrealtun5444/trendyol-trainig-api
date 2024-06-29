@@ -31,7 +31,7 @@ public class OrderPersistenceAdapter implements OrderPersistencePort {
 
     @Override
     @Transactional(readOnly = true)
-    @Cacheable(value = "OrderPersistenceAdapter.findById", key = "#id")
+   // @Cacheable(value = "OrderPersistenceAdapter.findById", key = "#id")
     public Optional<Order> findById(Long id) {
         return orderRepository.findById(id).map(OrderEntity::toOrder);
     }
@@ -51,7 +51,8 @@ public class OrderPersistenceAdapter implements OrderPersistencePort {
     @Override
     @Transactional(readOnly = true)
     public List<Order> findOrders() {
-        return orderRepository.findOrders().stream().map(OrderEntity::toOrder).collect(Collectors.toList());
+        //return orderRepository.findOrders().stream().map(OrderEntity::toOrder).collect(Collectors.toList());
+        return orderRepository.findAll().stream().map(OrderEntity::toOrder).collect(Collectors.toList());
     }
 
     @Override

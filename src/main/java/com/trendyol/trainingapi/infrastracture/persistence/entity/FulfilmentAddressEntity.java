@@ -25,7 +25,4 @@ public class FulfilmentAddressEntity extends AbstractEntity {
     @Column(name = "address", length = 1024)
     private String address;
 
-    @OneToOne(fetch = FetchType.LAZY, mappedBy = "fulfilmentAddress", orphanRemoval = true)
-    private OrderEntity order;
-
 }
