@@ -14,7 +14,6 @@ public class SearchCriteria {
     @NotEmpty(message = "key can not be empty")
     private String key;
 
-    @NotEmpty(message = "operation can not be empty")
     private SearchOperation operation;
 
     @NotNull(message = "value can not be empty")

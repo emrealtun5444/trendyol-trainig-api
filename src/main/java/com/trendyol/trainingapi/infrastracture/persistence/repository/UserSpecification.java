@@ -8,7 +8,7 @@ public class UserSpecification {
     public static Specification<UserEntity> withCriteria(SearchCriteria criteria) {
         return (root, query, builder) -> {
             switch (criteria.getOperation()) {
-                case GREATER_THAN -> {
+                case  GREATER_THAN -> {
                     return builder.greaterThanOrEqualTo(
                             root.get(criteria.getKey()), criteria.getValue().toString());
                 }
